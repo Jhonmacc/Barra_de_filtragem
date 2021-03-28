@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Buscas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="caixapesquisa">
+    <div class="header">
+      <h1>Contatos</h1>
+      <input onkeyup="filter()" type="text" id="value" placeholder="Buscar contato"> 
+    </div>
+
+    <div class="container">
+      <div class="profile">
+        <span class="icon">A</span>
+        <span class="name">Ana Lívia</span>
+    </div>
+
+    <div class="profile">
+      <span class="icon">B</span>
+      <span class="name">Bruna Alves</span>
+    </div>
+
+    <div class="profile">
+      <span class="icon">C</span>
+      <span class="name">Carlos Basto</span>
+    </div>  
+
+    <div class="profile">
+      <span class="icon">D</span>
+      <span class="name">Davi Reis</span>
+    </div>
+
+    <div class="profile">
+      <span class="icon">E</span>
+      <span class="name">Elton John</span>
+    </div> 
+
+      <div class="profile">
+        <span class="icon">F</span>
+        <span class="name">Francisco Babytom</span>
+      </div>
+
+      <div class="profile">
+        <span class="icon">G</span>
+        <span class="name">Giovana Mec Mec</span>
+      </div>
+  
+      <div class="profile">
+        <span class="icon">H</span>
+        <span class="name">Hérika Flávia</span>
+      </div>  
+  
+      <div class="profile">
+        <span class="icon">I</span>
+        <span class="name">Igor Mendes</span>
+      </div>
+  
+      <div class="profile">
+        <span class="icon">J</span>
+        <span class="name">Jeová Rafael</span>
+      </div> 
+
+      <div class="profile">
+        <span class="icon">L</span>
+        <span class="name">Lívia Martins</span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function filter() {
+
+      var value,name,profile,i;
+
+      value = document.getElementById("value").value.toUpperCase();
+      profile = document.getElementsByClassName("profile");
+
+      for(i=0;i<profile.length;i++){
+        name = profile[i].getElementsByClassName("name");
+        if (name[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+          profile[i].style.display = "flex";
+        }else{
+          profile[i].style.display = "none";
+
+        }
+      }
+  }
+</script>
+
+</body>
+</html>
