@@ -1,2 +1,2 @@
-# Tela_de_Pesquisa
-Tela de pesquisa usando JAVASCRIPT, HTML e CSS.
+# Barra de filtragem de contatos
+Barra de filtragem  usando JAVASCRIPT, HTML e CSS.
